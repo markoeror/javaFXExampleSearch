@@ -14,7 +14,7 @@ import javafx.scene.control.TableView;
 import springfx.model.Model;
 import springfx.model.Contact;
 
-public class TablePresenter implements Initializable {
+public class TableController implements Initializable {
 
     @FXML
     private TableView<Contact> table ;
@@ -27,7 +27,7 @@ public class TablePresenter implements Initializable {
         
     private final Model model ;
         
-    public TablePresenter(Model model) {
+    public TableController(Model model) {
         this.model = model ;
     }
     

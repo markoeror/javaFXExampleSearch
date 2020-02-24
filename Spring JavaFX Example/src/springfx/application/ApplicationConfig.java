@@ -9,15 +9,15 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
-import springfx.controls.ControlsPresenter;
+import springfx.controls.ControlsController;
 import springfx.data.DataAccessor;
 import springfx.data.MockDataAccessor;
-import springfx.editor.EditorPresenter;
-import springfx.editor.EditorPresenterImpl;
+import springfx.editor.EditorController;
+import springfx.editor.EditorControllerImpl;
 import springfx.model.Model;
 import springfx.model.ModelImpl;
-import springfx.search.SearchPresenter;
-import springfx.table.TablePresenter;
+import springfx.search.SearchController;
+import springfx.table.TableController;
 
 @Configuration
 public class ApplicationConfig {
@@ -43,25 +43,25 @@ public class ApplicationConfig {
     
     @Bean
     @Scope("prototype")
-    public EditorPresenter editorPresenter(Model model) {
-        return new EditorPresenterImpl(model);
+    public EditorController editorPresenter(Model model) {
+        return new EditorControllerImpl(model);
     }
     
     @Bean
     @Scope("prototype")
-    public TablePresenter tablePresenter(Model model) {
-        return new TablePresenter(model);
+    public TableController tablePresenter(Model model) {
+        return new TableController(model);
     }
     
     @Bean
     @Scope("prototype")
-    public ControlsPresenter controlsPresenter(Model model, HostServices hostServices) {
-        return new ControlsPresenter(model, hostServices);
+    public ControlsController controlsPresenter(Model model, HostServices hostServices) {
+        return new ControlsController(model, hostServices);
     }
     
     @Bean
     @Scope("prototype")
-    public SearchPresenter searchPresenter(Model model) {
-        return new SearchPresenter(model);
+    public SearchController searchPresenter(Model model) {
+        return new SearchController(model);
     }
 }

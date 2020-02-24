@@ -11,7 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import springfx.model.Model;
 
-public class ControlsPresenter implements Initializable {
+public class ControlsController implements Initializable {
 
     private final Model model ;
     private final HostServices hostServices ;
@@ -21,7 +21,7 @@ public class ControlsPresenter implements Initializable {
     @FXML
     private Button emailButton ;
     
-    public ControlsPresenter(Model model, HostServices hostServices) {
+    public ControlsController(Model model, HostServices hostServices) {
         this.model = model ;
         this.hostServices = hostServices ;
     }

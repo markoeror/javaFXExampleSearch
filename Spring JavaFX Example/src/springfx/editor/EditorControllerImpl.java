@@ -11,7 +11,7 @@ import javafx.scene.control.TextField;
 import springfx.model.Model;
 import springfx.model.Contact;
 
-public class EditorPresenterImpl implements EditorPresenter {
+public class EditorControllerImpl implements EditorController {
     
     private final Model model ;
     
@@ -26,7 +26,7 @@ public class EditorPresenterImpl implements EditorPresenter {
     
     private BooleanBinding updateDisabled ;
             
-    public EditorPresenterImpl(Model model) {
+    public EditorControllerImpl(Model model) {
         this.model = model ;
     }
 

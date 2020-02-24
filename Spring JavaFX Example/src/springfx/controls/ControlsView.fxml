@@ -4,7 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.geometry.Insets?>
 
-<HBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="springfx.controls.ControlsPresenter" alignment="CENTER" maxWidth="1.7976931348623157E308" spacing="10.0">
+<HBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="springfx.controls.ControlsController" alignment="CENTER" maxWidth="1.7976931348623157E308" spacing="10.0">
      <children>
      	<Button fx:id="emailButton" onAction="#mail" text="Email" />
         <Button mnemonicParsing="false" onAction="#newContact" text="New" />
